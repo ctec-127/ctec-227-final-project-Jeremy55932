@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+#logout {
+  display: none;
+}
+
+#register {
+}
+
+ul {
+  list-style: none;
+}
+
+#text,
+.text-center {
+}
+
+header h1,
+h2 {
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  float: right;
+}
+
+.table-responsive {
+}
+
+label.watched {
+  user-select: none;
+}
