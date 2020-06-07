@@ -28,11 +28,18 @@
         $sql2 = "INSERT INTO category (category_name,website_id,user_id)
             VALUES('$category_name','$db->insert_id','$user_id')";
         $result2 = $db->query($sql2);
+
+        $sql3 = "INSERT INTO watched (category_id)
+            VALUES('$db->insert_id')";
+        $result3 = $db->query($sql3);
+
+        header('location: login.php?message=Video%20 has%20been%20bookmarked.');
+
+        }
         // printf ("New Record has id %d.\n", $db->insert_id);
         // echo "<div>Video has been bookmarked!</div>";
-        header('location: login.php?message=Video%20 has%20been%20bookmarked.');
     }
-}
+
 
 // } else {
 //     echo '<p>The following errors were detected:</p>';

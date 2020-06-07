@@ -25,24 +25,46 @@
             echo '<p>Please try again</p>';
         }
     }
-
     ?>
-<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="post">
-    <div class="form-group">
-    <label for="username">User Name</label>
-    <input type="text" class="form-control" id="username" placeholder="Username" name="username">
-    </div>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/style.css">
+        <script type="text/javascript">
 
-    <div class="form-group">
-    <label for="password">Password</label>
-    <input type="password" class="form-control" id="password" placeholder="Password" name="password">
-    </div>
+        </script>
 
-    <div class="form-check mb-2 mr-sm-2">
-    <input class="form-check-input" type="checkbox" id="inlineFormCheck">
-    <label class="form-check-label" for="inlineFormCheck">Remember me</label>
+    <title>Jeremy's Final Project Video Bookmark Gallery</title>
+    </head>
+    <body class="login-form">
+
+    <?php require_once "../inc/header.inc.php"; ?>
+
+    <div class="background">
+        <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="post">
+            <div class="form-group">
+                <label for="username">User Name</label>
+                <input type="text" class="form-control" id="username" placeholder="Username" name="username">
+            </div>
+    
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Password" name="password">
+            </div>
+    
+            <button type="submit" class="btn btn-primary" value="login">Login</button>
+            <button type="reset" class="btn btn-primary">Reset</button>
+    
+            <!-- <button type="register" class="btn btn-primary" value="register">Register</button> -->
+            
+        </form>
     </div>
-    <button type="submit" class="btn btn-primary" value="login">Login</button>
-    </form>
+</body>
     <script src="js/script.js"></script>
+    </html>
+
+
 

@@ -7,3 +7,8 @@ printf ("New Record has id %d.\n", mysqli_insert_id($db)) . "<br><br>";
 
 // get current directory
 echo getcwd();
+
+
+// $sql3 = "INSERT INTO watched (website_id)
+//             VALUES('$db->insert_id')";
+//         $result3 = $db->query($sql3);

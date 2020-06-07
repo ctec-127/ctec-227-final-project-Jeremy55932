@@ -10,6 +10,35 @@
 #register {
 }
 
+#logged {
+  display: none;
+}
+
+body {
+}
+
+div.background {
+  background-image: url("../pic/film2.jpg");
+  margin-bottom: 10px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  padding: 20px;
+
+  /* height: 100%;
+  width: 100%; */
+}
+a {
+  color: #000;
+}
+
+a.delete {
+  color: #ff0000;
+}
+
+a.url-link {
+  color: rgb(122, 186, 196);
+}
 ul {
   list-style: none;
 }
@@ -17,15 +46,38 @@ ul {
 #text,
 .text-center {
 }
+header {
+  border: 1px solid #000;
+  background-position: center;
+  padding: 20px;
+  background: rgba(122, 184, 255, 0.89);
+}
 
 header h1,
 h2 {
   text-align: center;
 }
 
-nav {
+nav.event {
   display: flex;
   float: right;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+nav.show {
+  display: flex;
+  gap: 5px;
+  justify-content: space-between;
+}
+
+nav.show ul {
+  display: flex;
+}
+
+nav.show ul li {
+  margin-left: 10px;
 }
 
 .table-responsive {
@@ -33,4 +85,46 @@ nav {
 
 label.watched {
   user-select: none;
+  color: #ffffff;
+}
+
+table.color {
+  background: rgba(0, 0, 0, 0.767);
+}
+
+.title,
+.categoryname {
+  color: rgba(122, 184, 255, 0.89);
+  margin: 0;
+}
+
+.categoryname {
+  margin-top: -20px;
+}
+
+body.login-form {
+  text-align: center;
+}
+
+body.login-form form {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  font-size: 1.5rem;
+  border: 1px solid rgb(0, 0, 0);
+  padding: 40px 60px;
+  margin-top: 20px;
+  border-radius: 3%;
+  /* color: #ffffff; */
+}
+
+body.login-form form input {
+  /* width: 130%; */
+}
+
+body.login-form .background {
+  background-image: url(../pic/film1.jpg);
+  padding: 8%;
+  background-position: left;
 }
