@@ -19,7 +19,7 @@
                 <a href="main.php" id="home">Home</a>
             </li>
             <li class="li-home-login">
-                <a href="home.php" id="logged">Home</a>
+                <a href="home.php" id="logged">Bookmarks</a>
             </li>
             <li>
                 <a href="about.php">About</a>
