@@ -33,7 +33,7 @@ a {
 }
 
 a.delete {
-  color: #ff0000;
+  color: #ee0202;
 }
 
 a.url-link {
@@ -49,8 +49,8 @@ ul {
 header {
   border: 1px solid #000;
   background-position: center;
-  padding: 20px;
-  background: rgba(122, 184, 255, 0.89);
+  padding: 20px 0 0 0;
+  background: rgba(122, 184, 255, 0.52);
 }
 
 header h1,
@@ -68,16 +68,33 @@ nav.event {
 
 nav.show {
   display: flex;
-  gap: 5px;
   justify-content: space-between;
+  background: rgba(255, 255, 255, 0.52);
+  margin-top: 20px;
+  margin-bottom: -15px;
+  border-top: 1px solid #000000;
 }
 
 nav.show ul {
   display: flex;
+  padding: 5px 0 4px 0;
 }
 
-nav.show ul li {
-  margin-left: 10px;
+nav.show ul li a {
+  /* margin-left: 10px; */
+  font-size: 1.1rem;
+  padding: 6px 4px;
+  font-weight: bold;
+}
+
+nav.show ul li a:hover {
+  background: rgba(255, 255, 255, 0.52);
+  color: #000000;
+}
+
+.li-home-login {
+  margin: -6px 0 0 0;
+  padding-left: 4px;
 }
 
 .table-responsive {
@@ -106,7 +123,12 @@ body.login-form {
   text-align: center;
 }
 
-body.login-form form {
+body.registerform {
+  text-align: center;
+}
+
+body.login-form form,
+body.registerform form {
   display: inline-block;
   margin-left: auto;
   margin-right: auto;
@@ -115,16 +137,30 @@ body.login-form form {
   border: 1px solid rgb(0, 0, 0);
   padding: 40px 60px;
   margin-top: 20px;
-  border-radius: 3%;
-  /* color: #ffffff; */
+  border-radius: 1%;
+  margin-bottom: 10px;
+  background: rgba(255, 255, 255, 0.726);
 }
 
-body.login-form form input {
-  /* width: 130%; */
-}
-
-body.login-form .background {
+body.login-form .background-login {
   background-image: url(../pic/film1.jpg);
-  padding: 8%;
+  background-repeat: no-repeat;
+  padding-bottom: 20%;
+  padding-top: 10%;
   background-position: left;
+}
+
+.registerform form {
+  background: rgba(255, 255, 255, 0.726);
+}
+
+.registerform-bg {
+  background-image: url(../pic/film1.jpg);
+  background-repeat: no-repeat;
+  padding-bottom: 15%;
+  /* width: 100%;
+  height: 100%; */
+
+  /* background-position: center; */
+  /* background-size: cover; */
 }

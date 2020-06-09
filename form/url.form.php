@@ -15,7 +15,7 @@
     if (isset($_SESSION['user_id'])) {
         $user_id = $_SESSION['user_id'];
     } else {
-        $user_id = 'guest';
+        $user_id = false;
     }
     $sql = "INSERT INTO website (website_url,video_name,user_id)
             VALUES('$website_url','$video_name','$user_id')";
@@ -24,7 +24,6 @@
     if (!$result) {
         echo "<div>There was a problem entering your URL.</div>";
     } else {
-        // printf ("New Record has id %d.\n", mysqli_insert_id($db));
         $sql2 = "INSERT INTO category (category_name,website_id,user_id)
             VALUES('$category_name','$db->insert_id','$user_id')";
         $result2 = $db->query($sql2);
@@ -33,26 +32,11 @@
             VALUES('$db->insert_id')";
         $result3 = $db->query($sql3);
 
-        header('location: login.php?message=Video%20 has%20been%20bookmarked.');
+        header('location: home.php?message=Video%20 has%20been%20bookmarked.');
 
         }
-        // printf ("New Record has id %d.\n", $db->insert_id);
-        // echo "<div>Video has been bookmarked!</div>";
     }
 
-
-// } else {
-//     echo '<p>The following errors were detected:</p>';
-//     echo '<div class="pt-4 alert alert-warning" role="alert">';
-//         echo '<ul>';
-//         foreach ($errors as $text){
-//             echo '<li>' . $text . '</li>';
-//         }
-//         echo '</ul>';
-//     echo '</div>';
-//     echo '<p>All of these fields are required. Please fill them in.</p>';
-
-// }
 
 ?>
 

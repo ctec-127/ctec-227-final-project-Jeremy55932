@@ -1,4 +1,4 @@
-<?php 
+<?php
     require_once "form/login.form.php";
 ?>
 
@@ -9,8 +9,8 @@
 
     <?php require_once "inc/header.inc.php"; ?>
 
-    <div class="background">
-        <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="post">
+    <div class="background-login">
+        <form action="<?php htmlspecialchars($_SERVER['PHP_SELF']);?>" method="post">
             <div class="form-group">
                 <label for="username">User Name</label>
                 <input type="text" class="form-control" id="username" placeholder="Username" name="username">
@@ -22,10 +22,8 @@
             </div>
     
             <button type="submit" class="btn btn-primary" value="login">Login</button>
-            <button type="reset" class="btn btn-primary">Reset</button>
-    
-            <!-- <button type="register" class="btn btn-primary" value="register">Register</button> -->
-            
+
+            <button type="reset" class="btn btn-primary">Reset Form</button>
         </form>
     </div>
 </body>

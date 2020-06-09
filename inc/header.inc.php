@@ -3,10 +3,10 @@
     <nav class="event">
         <ul>
             <li>
-            <a href="form\register.form.php" id="register">Register</a>
+            <!-- <a href="registerform.php" id="register">Register</a> -->
             </li>
             <li>
-            <a href="form\login.form.php" id="login">Login</a>
+            <a href="loginform.php" id="login">Login</a>
             </li>
             <li>
             <a href="main.php" id="logout">Logout</a>
@@ -18,10 +18,14 @@
             <li>
                 <a href="main.php" id="home">Home</a>
             </li>
-            <li>
-                <a href="login.php" id="logged">Home</a>
+            <li class="li-home-login">
+                <a href="home.php" id="logged">Home</a>
             </li>
             <li>
+                <a href="about.php">About</a>
+            </li>
+            <li>
+            <a href="registerform.php" id="register">Register</a>
             </li>
         </ul>
     </nav>

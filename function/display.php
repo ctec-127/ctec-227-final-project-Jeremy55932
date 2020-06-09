@@ -1,6 +1,6 @@
 <?php
-require_once './form/url.form.php';
-require_once '.\db/video_bookmark.php';
+require_once 'form/url.form.php';
+require_once 'db/video_bookmark.php';
 
     $sql = 'SELECT category.category_name, website.website_url, website.video_name, website.website_id, watched.watched_id FROM category INNER JOIN website ON category.website_id=website.website_id INNER JOIN watched ON watched.category_id=category.category_id';
 
@@ -13,7 +13,7 @@ require_once '.\db/video_bookmark.php';
     while ($row = $result->fetch_assoc()){
         $title = ucwords("{$row['video_name']}");
         $category_name = ucwords("{$row['category_name']}");
-        
+
         echo "<td class=\"text-center\">
         <a href=\"delete-url.php?website_id={$row['website_id']}\" onclick=\"return confirm('Are you sure?');\" class=\"delete\">Delete</a><br>
         <p class=\"title\"><strong>Title: $title</strong></p><br>
