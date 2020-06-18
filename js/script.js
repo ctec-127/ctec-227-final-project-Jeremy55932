@@ -6,10 +6,10 @@ fetch("helper/is_logged_in.php")
       login.style.display = "none";
       const register = document.querySelector("#register");
       register.style.display = "none";
-      const home = document.querySelector("#home");
-      home.style.display = "none";
-      const logged = document.querySelector("#logged");
-      logged.style.display = "inline-block";
+      const profile = document.querySelector("#profile");
+      profile.style.display = "inline-block";
+      const bookmark = document.querySelector("#bookmark");
+      bookmark.style.display = "inline-block";
       const logout = document.querySelector("#logout");
       logout.style.display = "inline-block";
 
@@ -21,11 +21,8 @@ fetch("helper/is_logged_in.php")
             if (res.status == "success") {
               login.style.display = "inline-block";
               logout.style.display = "none";
-              home.style.display = "inline-block";
-              logged.style.display = "none";
-              document.querySelector("#message").innerHTML =
-                "<p>You have been logged out</p>";
               document.querySelector("h1").innerText = "Welecome to our Site!";
+              document.location.href = "main.php";
             }
           });
       });

@@ -7,22 +7,9 @@
 <?php require_once "inc/head.inc.php"; ?>
     <body class="login-form">
 
-    <?php require_once "inc/header.inc.php";
-    // if(basename($_SERVER['PHP_SELF']) == 'advanced-search-record.php') {
-    //     $action = 'advanced-search-record.php';
-    //     $button = 'Search Record';
-    // } else if (basename($_SERVER['PHP_SELF']) == 'update-record.php') {
-    //     $action = 'update-record.php';
-    //     $button = 'Update Record';
-    // } else{
-    //     $action = htmlspecialchars($_SERVER['PHP_SELF']);
-    //     $button = 'Create Record';
-
-    // }
-
-    ?>
+    <?php require_once "inc/header.inc.php";?>
     <div class="background-login">
-        <form action="<?php echo $action;?>" method="post">
+        <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="post">
             <div class="form-group">
                 <label for="username">User Name</label>
                 <input type="text" class="form-control" id="username" placeholder="Username" name="username">
@@ -38,6 +25,9 @@
             <button type="reset" class="btn btn-primary">Reset Form</button>
         </form>
     </div>
-</body>
+<?php
+    require_once "inc/footer.inc.php";
+?>
     <script src="js/script.js"></script>
+</body>
     </html>

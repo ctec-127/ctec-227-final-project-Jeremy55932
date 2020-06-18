@@ -3,7 +3,7 @@
     <nav class="event">
         <ul>
             <li>
-            <!-- <a href="registerform.php" id="register">Register</a> -->
+            <a href="profile.php" id="profile">My Profile</a>
             </li>
             <li>
             <a href="loginform.php" id="login">Login</a>
@@ -18,14 +18,14 @@
             <li>
                 <a href="main.php" id="home">Home</a>
             </li>
-            <li class="li-home-login">
-                <a href="home.php" id="logged">Bookmarks</a>
-            </li>
             <li>
                 <a href="about.php">About</a>
             </li>
             <li>
-            <a href="registerform.php" id="register">Register</a>
+                <a href="registerform.php" id="register">Register</a>
+            </li>
+            <li class="li-home-login">
+                <a href="homestart.php" id="bookmark">Bookmarks</a>
             </li>
         </ul>
     </nav>

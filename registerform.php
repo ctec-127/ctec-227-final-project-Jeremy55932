@@ -1,4 +1,5 @@
 <?php 
+    session_start();
     require_once "form/register.php";
 ?>
 <!DOCTYPE html>
@@ -9,8 +10,12 @@
 <body class="registerform">
 <?php
     require_once "inc/header.inc.php";
+    $registerMessage = "<div class=\"register\">You are now ready to go!</div>";
 ?>
+
+<?php echo (isset($reg_msg) ? $reg_msg : ''); ?>
 <div class="registerform-bg">
+    
     <form action="<?php htmlspecialchars($_SERVER['PHP_SELF']);?>" method="post">
         <div class="form-group">
             <label for="username">User Name</label>
@@ -42,7 +47,9 @@
         <button type="reset" class="btn btn-primary">Reset Form</button>
     </form>
 </div>
-
+<?php
+    require_once "inc/footer.inc.php";
+?>
     <script defer src="js/script.js"></script>
 </body>
 </html>

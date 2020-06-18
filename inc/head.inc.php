@@ -6,24 +6,8 @@
     <link rel="stylesheet" href="css/style.css">
     <script type="text/javascript">
 
-                // if(document.getElementById('watched_id').checked) {
-                //     document.getElementById('watched_id').checked = true;
-                // }
-    // <?php
-    //     $watched = $row['watched_id'];
-    //     ?>
-        const checkbox = document.getElementById('watched_id')
 
-    checkbox.addEventListener('change', (event) => {
-    if (event.target.checked) {
-        alert('checked');
-    } else {
-        alert('not checked');
-    }
-    })
-
-
-</script>
+    </script>
 
     <title>Jeremy's Final Project Video Bookmark Gallery</title>
 </head>

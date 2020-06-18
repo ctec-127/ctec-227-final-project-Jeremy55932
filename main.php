@@ -14,12 +14,18 @@
 <?php
     require_once "inc/header.inc.php";
 ?>
-    <h2>The video bookmark gallery is where you can save online video's to watch later</h2>
-    <h2>To start bookmarking your online video's register for an account or login to your account if you already have one</h2>
+<div class="main-content">
+        <div class="main-content-bg">
+
+            <h2>The video bookmark gallery is where you can save online video's to watch later. To start bookmarking your online video's register for an account or login to your account if you already have one</h2>
+        </div>
+</div>
     
 <?php
+    require_once "inc/footer.inc.php";
 ?>
-</body>
-</html>
+
 <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script defer src="js/script.js"></script>
+</body>
+</html>

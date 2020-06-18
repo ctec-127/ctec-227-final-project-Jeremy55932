@@ -2,8 +2,6 @@
     session_start();
     require_once 'db/video_bookmark.php';
 
-    // require_once 'content.form.copy.php';
-
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         $username = $db->real_escape_string($_POST['username']);
@@ -18,7 +16,9 @@
             $_SESSION['user_id'] = $row['user_id'];
             $_SESSION['username'] = $row['username'];
             $_SESSION['first_name'] = $row['first_name'];
-            header('location: home.php');
+            $_SESSION['last_name'] = $row['last_name'];
+
+            header('location: homestart.php');
 
         } else {
             echo '<p>Please try again</p>';

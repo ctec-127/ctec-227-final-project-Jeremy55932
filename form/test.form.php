@@ -23,15 +23,45 @@
     if (!$result) {
         echo "<div>There was a problem entering your URL.</div>";
     } else {
-        $sql2 = "INSERT INTO category (category_name,website_id,user_id)
-            VALUES('$category_name','$db->insert_id','$user_id')";
-        $result2 = $db->query($sql2);
 
-        $sql3 = "INSERT INTO watched (category_id)
-            VALUES('$db->insert_id')";
-        $result3 = $db->query($sql3);
 
-        header('location: homestart.php?message=Video%20 has%20been%20bookmarked.');
+
+        if (isset($_GET['category_name'])){
+            $category_name = $_GET['category_name'];
+            $sql4 = "SELECT `category_name` FROM `category` WHERE user_id = $user_id";
+            $result4 = $db->query($sql4);
+            
+            if($result4 !== $category_name){
+
+                $sql2 = "INSERT INTO category (category_name,website_id,user_id)
+                    VALUES('$category_name','$db->insert_id','$user_id')";
+                $result2 = $db->query($sql2);
+        
+                $sql3 = "INSERT INTO watched (category_id)
+                    VALUES('$db->insert_id')";
+                $result3 = $db->query($sql3);
+        
+                header('location: homestart.php?message=Video%20 has%20been%20bookmarked.');
+            } else {
+                $category_id = $_POST['category_id'];
+
+                $sql2 = "INSERT INTO category (category_id, category_name,website_id,user_id)
+                    VALUES('$category_id', '$category_name','$db->insert_id','$user_id')";
+                $result2 = $db->query($sql2);
+        
+                $sql3 = "INSERT INTO watched (category_id)
+                    VALUES('$db->insert_id')";
+                $result3 = $db->query($sql3);
+                header('location: homestart.php?message=Video%20 has%20been%20bookmarked.');
+
+            }
+
+        }
+
+
+
+
+
 
         }
     }
