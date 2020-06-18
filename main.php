@@ -17,7 +17,7 @@
 <div class="main-content">
         <div class="main-content-bg">
 
-            <h2>The video bookmark gallery is where you can save online video's to watch later. To start bookmarking your online video's register for an account or login to your account if you already have one</h2>
+            <h4>The video bookmark gallery is where you can save online video's to watch later. To start bookmarking your online video's register for an account or login to your account if you already have one</h4>
         </div>
 </div>
     
